@@ -9,32 +9,40 @@ tasks = [
 #As a user, to manage my task list I would like a program that allows me to:
 
 #1. Print a list of uncompleted tasks
-def print_uncompleted_tasks():
-    for task in tasks:
+def print_uncompleted_tasks(list):
+    uncompleted_tasks = []
+    for task in list:
         if task["completed"] == False:
-            print(task["description"])
+            uncompleted_tasks.append(task)
+    print(uncompleted_tasks)
+    return uncompleted_tasks
 
 
-print_uncompleted_tasks()
+print_uncompleted_tasks(tasks)
 print("-----------------------")
 
 #2. Print a list of completed tasks
-def print_completed_tasks():
-    for task in tasks:
+def print_completed_tasks(list):
+    completed_tasks = []
+    for task in list:
         if task["completed"] == True:
-            print(task["description"])
+            completed_tasks.append(task)
+    print(completed_tasks)
+    return completed_tasks
 
 
-print_completed_tasks()
+print_completed_tasks(tasks)
 print("-----------------------")
 
 #3. Print a list of all task descriptions
-def print_all_task_descriptions():
-    for task in tasks:
-        print(task["description"])
+def print_all_task_descriptions(list):
+    task_descriptions = []
+    for task in list:
+        task_descriptions.append(task["description"])
+    return task_descriptions
 
 
-print_all_task_descriptions()
+print(print_all_task_descriptions(tasks))
 print("-----------------------")
 #4. Print a list of tasks where time_taken is at least a given time
 
