@@ -48,3 +48,37 @@ print("-----------------------")
 #4. Print a list of tasks where time_taken is at least a given time
 
 #5. Print any task with a given description
+
+### Extension
+
+# 6. Given a description update that task to mark it as complete.
+def get_task_with_description(list, description):
+    for task in list:
+        if task["description"] == description:
+            return task
+    return "Task not found"
+        
+
+print(get_task_with_description(tasks, "Make Dinner"))
+print("-----------------------")
+
+# 7. Add a task to the list
+
+# ### Further Extensions
+
+# 8. Use a while loop to display the following menu and allow the use to enter an option.
+
+# ```python
+# print("Menu:")
+# print("1: Display All Tasks")
+# print("2: Display Uncompleted Tasks")
+# print("3: Display Completed Tasks")
+# print("4: Mark Task as Complete")
+# print("5: Get Tasks Which Take Longer Than a Given Time")
+# print("6: Find Task by Description")
+# print("7: Add a new Task to list")
+# print("M or m: Display this menu")
+# print("Q or q: Quit")
+# ```
+
+# 9. Call the appropriate function depending on the users choice.
